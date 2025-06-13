@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Telegram.Bot" Version="22.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SpellCheckerApi\" />
+    <None Remove="Bot\" />
+    <None Remove="Bot\Models\" />
+    <None Remove="Utility\" />
+    <None Remove="Bot\Data\" />
+    <None Remove="Bot\Data\Languages.json" />
+    <None Remove="Bot\Handlers\" />
+    <None Remove="Bot\Handlers\Base\" />
+    <None Remove="Bot\Callback\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SpellCheckerApi\" />
+    <Folder Include="Bot\" />
+    <Folder Include="Bot\Models\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Bot\Data\" />
+    <Folder Include="Bot\Handlers\" />
+    <Folder Include="Bot\Handlers\Base\" />
+    <Folder Include="Bot\Callback\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bot\Data\Languages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
